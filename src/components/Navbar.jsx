@@ -42,6 +42,14 @@ function Navbar() {
           </li>
           <li>
             <a
+              href="#certificates"
+              className="text-slate-300 hover:text-sky-400 transition-colors"
+            >
+              Certificates
+            </a>
+          </li>
+          <li>
+            <a
               href="#contact"
               className="text-slate-300 hover:text-sky-400 transition-colors"
             >

@@ -15,7 +15,7 @@ const Contact = () => {
         {/* Header */}
         <div className="flex flex-col items-center mb-12">
           <span className="text-blue-500 font-mono mb-4 text-lg">
-            03. What’s Next?
+            04. What’s Next?
           </span>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Get In Touch
