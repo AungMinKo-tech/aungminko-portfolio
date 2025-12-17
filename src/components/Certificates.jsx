@@ -62,7 +62,7 @@ function Certificates() {
           maxWidth={500}
           minHeight={400}
           maxHeight={700}
-          maxShadowOpacity={0.5} // စာရွက်လှန်ရင် ပေါ်မယ့် အရိပ်
+          maxShadowOpacity={0.5} // စာရွက်လှန်ရင် ပေါ်မယ့်အရိပ်
           showCover={true}
           mobileScrollSupport={true}
           className="shadow-2xl"
