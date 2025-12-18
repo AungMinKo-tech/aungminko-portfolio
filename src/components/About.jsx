@@ -50,7 +50,7 @@ function About() {
                 <span className="text-blue-500">▹</span> Adonis.js
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-blue-500">▹</span> JavaScript (ES6+)
+                <span className="text-blue-500">▹</span> JavaScript
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-blue-500">▹</span> React.js
@@ -67,16 +67,13 @@ function About() {
             </ul>
           </div>
 
-          {/* Right Side - Profile Image Container */}
           <div className="flex-1 relative group w-full max-w-100">
-            {/* Blue Frame (Decorative) */}
-            {/* top-4 left-4 ကနေ ပုံရဲ့အနောက်မှာ နေရာယူထားတာပါ */}
             <div className="absolute top-4 left-4 w-full aspect-4/5 border-2 border-blue-500 rounded-2xl transition-all duration-300 group-hover:top-2 group-hover:left-2"></div>
 
             {/* Actual Image Card */}
             <div className="relative aspect-4/5 bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
               <img
-                src={MyProfile} // သင့်ပုံ Path
+                src={MyProfile}
                 alt="Profile"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

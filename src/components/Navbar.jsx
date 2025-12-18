@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Logo from "../assets/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md text-white shadow-sm z-50 border-b border-white/5">
+    <nav className="fixed top-0 left-0 w-full bg-white dark:bg-slate-900/80 backdrop-blur-md text-white shadow-sm z-50 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
         <a href="#home" className="flex items-center py-1">
           <img
@@ -57,7 +58,7 @@ function Navbar() {
             </a>
           </li>
         </ul>
-
+        {/* <ThemeToggle /> */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl p-2 focus:outline-none"

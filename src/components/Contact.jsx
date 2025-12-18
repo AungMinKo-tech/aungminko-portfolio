@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Github, Linkedin, Facebook, Send } from "lucide-react";
+import CodeWave from "./CodeWave";
 
 const Contact = () => {
   const email = "aungminko.dev@gmail.com";
@@ -90,6 +91,9 @@ const Contact = () => {
         <p className="text-slate-600 font-mono text-sm mt-20">
           Designed & Built by Aung Min Ko © 2025
         </p>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full">
+        <CodeWave />
       </div>
     </section>
   );

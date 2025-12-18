@@ -45,7 +45,7 @@ function Certificates() {
   return (
     <section
       id="certificates"
-      className="py-20 bg-slate-900 text-white overflow-hidden"
+      className="py-20 bg-slate-950 text-white overflow-hidden"
     >
       <h2 className="text-4xl font-bold text-center mb-12">
         <span className="text-blue-500 font-mono mb-4 text-lg">03.</span> My{" "}
