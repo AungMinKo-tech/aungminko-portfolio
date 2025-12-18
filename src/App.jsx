@@ -19,7 +19,6 @@ function App() {
           <SnakeGame />
         </div>
       </section>
-
       <Certificates />
       <Contact />
       <Chatbot />

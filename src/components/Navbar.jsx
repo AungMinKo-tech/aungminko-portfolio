@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Logo from "../assets/logo.png";
-import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -96,6 +95,13 @@ function Navbar() {
             className="block hover:text-sky-400"
           >
             Projects
+          </a>
+          <a
+            href="#certificates"
+            onClick={() => setOpen(false)}
+            className="block hover:text-sky-400"
+          >
+            Certificates
           </a>
           <a
             href="#contact"
