@@ -14,7 +14,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <section className="py-10 bg-slate-900/50">
+      <section className="py-10 bg-slate-950">
         <div className="max-w-4xl mx-auto px-6">
           <SnakeGame />
         </div>
