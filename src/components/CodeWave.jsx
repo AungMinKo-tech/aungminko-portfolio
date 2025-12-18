@@ -11,7 +11,7 @@ const codeLines = [
 
 const CodeWave = () => {
   return (
-    <div className="w-full py-3 bg-white dark:bg-slate-800/50 overflow-hidden font-mono text-[10px] md:text-xs border-t border-slate-800/30 mt-5">
+    <div className="w-full py-3 bg-slate-800/50 overflow-hidden font-mono text-[10px] md:text-xs border-t border-slate-800/30 mt-5">
       {/* Row 1: Left to Right */}
       <div className="animate-scroll-left opacity-20">
         <div className="flex gap-10">
