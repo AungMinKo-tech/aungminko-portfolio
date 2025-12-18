@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Certificates from "./components/Certificates";
+import Chatbot from "./components/ChatBot";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ function App() {
       <Projects />
       <Certificates />
       <Contact />
+      <Chatbot />
     </>
   );
 }
