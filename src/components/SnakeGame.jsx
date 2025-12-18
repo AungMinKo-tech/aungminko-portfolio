@@ -102,7 +102,7 @@ const SnakeGame = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-10 bg-slate-950 borde shadow-2xl">
+    <div className="flex flex-col items-center justify-center p-10 bg-slate-950 shadow-2xl">
       <h2 className="text-2xl font-bold text-white mb-4">Snake Game</h2>
       <div className="text-sky-400 mb-2 font-mono">Score: {score}</div>
 
