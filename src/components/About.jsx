@@ -18,8 +18,11 @@ function About() {
             <p>
               Hello! I'm{" "}
               <span className="text-blue-400 font-semibold">Aung Min Ko</span>.
-              I am a developer who loves crafting visually appealing and
-              user-centric web applications.
+              I’m a Junior Web Developer with a strong passion for web
+              development and a growing skill set in both frontend and backend
+              technologies. I’ve been learning and building projects using HTML,
+              CSS, JavaScript for the frontend and PHP with Laravel for the
+              backend.
             </p>
             <p>
               My journey started in <span className="text-white">2024</span>,
@@ -27,14 +30,19 @@ function About() {
               <span className="text-blue-300">
                 PHP, Laravel, React, Node.js and Tailwind CSS
               </span>
-              .
+              .I enjoy the challenge of developing responsive, user-friendly
+              interfaces using React, as well as creating efficient backend
+              systems with Laravel. I’m familiar with MySQL database, API and
+              version control using Git. Through personal projects and
+              continuous learning, I’m improving my full stack development
+              skills every day.
             </p>
             <p>
               I am committed to{" "}
               <span className="italic text-slate-200">continuous learning</span>
               , writing <span className="text-white">clean code</span> and
               prioritizing
-              <span className="text-white"> User Experience (UX)</span> in every
+              <span className="text-white"> User Experience </span> in every
               project.
             </p>
 
