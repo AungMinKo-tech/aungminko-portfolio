@@ -1,6 +1,7 @@
 import heroImg from "../../assets/hero.png";
 import TypewriterEffect from "../ui/TypewriterEffect";
 import CodeWave from "../ui/CodeWave";
+import Snowfall from "react-snowfall";
 
 function Hero() {
   const myWords = ["Web Developer"];
@@ -11,6 +12,7 @@ function Hero() {
       className="min-h-screen bg-slate-950 text-white flex flex-col justify-center relative overflow-hidden pt-10"
     >
       {/* Main Content Area */}
+      <Snowfall color="white" />
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         <div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4">
