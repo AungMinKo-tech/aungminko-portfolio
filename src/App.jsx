@@ -1,11 +1,11 @@
-import About from "./components/About";
-import Certificates from "./components/Certificates";
-import Chatbot from "./components/ChatBot";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Project";
-import SnakeGame from "./components/SnakeGame";
+import About from "./components/features/About";
+import Certificates from "./components/features/Certificates";
+import Chatbot from "./components/features/ChatBot";
+import Contact from "./components/features/Contact";
+import Hero from "./components/features/Hero";
+import Navbar from "./components/features/Navbar";
+import Projects from "./components/features/Project";
+import SnakeGame from "./components/features/SnakeGame";
 
 function App() {
   return (

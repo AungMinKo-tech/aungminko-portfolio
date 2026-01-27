@@ -1,9 +1,9 @@
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
-import ProgrammingBasic from "../assets/basic.png";
-import PwdOne from "../assets/pwd_1.jpg";
-import PwdTwo from "../assets/pwd2.png";
-import FullStack from "../assets/codelab.jpg";
+import ProgrammingBasic from "../../assets/basic.png";
+import PwdOne from "../../assets/pwd_1.jpg";
+import PwdTwo from "../../assets/pwd2.png";
+import FullStack from "../../assets/codelab.jpg";
 
 const certificatesData = [
   {

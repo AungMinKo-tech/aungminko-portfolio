@@ -9,7 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import CodeWave from "./CodeWave";
+import CodeWave from "../ui/CodeWave";
 
 const Contact = () => {
   const email = "aungminko.dev@gmail.com";

@@ -1,6 +1,6 @@
-import heroImg from "../assets/hero.png";
-import TypewriterEffect from "./TypewriterEffect";
-import CodeWave from "./CodeWave";
+import heroImg from "../../assets/hero.png";
+import TypewriterEffect from "../ui/TypewriterEffect";
+import CodeWave from "../ui/CodeWave";
 
 function Hero() {
   const myWords = ["Web Developer"];

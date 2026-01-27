@@ -1,9 +1,9 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
-import AdminDashboard from "../assets/admin_dashboard.png";
-import MyanmarLearning from "../assets/myanmar-learning.png";
-import Utility from "../assets/utility.jpg";
-import Yoga from "../assets/yoga.jpg";
+import AdminDashboard from "../../assets/admin_dashboard.png";
+import MyanmarLearning from "../../assets/myanmar-learning.png";
+import Utility from "../../assets/utility.jpg";
+import Yoga from "../../assets/yoga.jpg";
 
 const Projects = () => {
   const projectList = [
