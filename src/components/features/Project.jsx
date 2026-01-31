@@ -12,6 +12,7 @@ const Projects = () => {
       tech: "PHP / Laravel / MySQL",
       image: AdminDashboard,
       github: "https://github.com/AungMinKo-tech/E_commerce-system",
+      demo: "https://independent-sean-onetechmm-e7f5fcb4.koyeb.app",
     },
     {
       title: "Utility Management System",
@@ -25,12 +26,6 @@ const Projects = () => {
       tech: "PHP / Laravel / MySQL",
       image: Yoga,
       github: "https://github.com/AungMinKo-tech/laravel_yoga_api",
-    },
-    {
-      title: "Myanmar Learning App",
-      tech: "React / Adonis.js / PostgreSQL",
-      image: MyanmarLearning,
-      github: "https://github.com/AungMinKo-tech/myanmar_learning_website",
     },
   ];
 
@@ -111,9 +106,22 @@ const ProjectCard = ({ project }) => (
             target="_blank"
             rel="noreferrer"
             className="text-slate-400 hover:text-white transition-colors"
+            title="View Code"
           >
             <Github size={20} />
           </a>
+
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-blue-400 transition-colors"
+              title="Live Demo"
+            >
+              <ExternalLink size={20} />
+            </a>
+          )}
         </div>
       </div>
     </div>
