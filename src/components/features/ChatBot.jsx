@@ -26,7 +26,7 @@ const Chatbot = () => {
     },
     {
       q: "Are you available for hire?",
-      a: "Yes! I'm currently looking for Junior Web Developer roles.",
+      a: "Currently, I'm not looking for new opportunities as I've started a new role. But I'm always open to networking!",
     },
     {
       q: "How can I contact you?",
@@ -34,12 +34,12 @@ const Chatbot = () => {
     },
     {
       q: "Where are you based?",
-      a: "I'm currently based in Yangon, Myanmar and open to remote or on-site work.",
+      a: "I'm currently based in Yangon, Myanmar.",
     },
     {
       q: "Can I see your CV?",
-      a: "Sure! You can download my latest resume right here: 👇",
-      isDownload: true,
+      a: "I'm currently not sharing my CV as I've recently started a new position. Thanks for your interest!",
+      isDownload: false,
     },
   ];
 
