@@ -1,9 +1,8 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
 import AdminDashboard from "../../assets/admin_dashboard.png";
-import MyanmarLearning from "../../assets/myanmar-learning.png";
 import Utility from "../../assets/utility.jpg";
-import Yoga from "../../assets/yoga.jpg";
+import unlockwealth from "../../assets/unlockwdigital.png";
 
 const Projects = () => {
   const projectList = [
@@ -22,10 +21,10 @@ const Projects = () => {
         "https://github.com/AungMinKo-tech/Laravel-Utility-Management-System-",
     },
     {
-      title: "Unlock Wealth Resort",
-      tech: "PHP / Laravel / MySQL",
-      image: Yoga,
-      github: "https://github.com/AungMinKo-tech/laravel_yoga_api",
+      title: "Unlock Wealth Digital",
+      tech: "React / Typescript",
+      image: unlockwealth,
+      demo: "https://unlockwealthdigital.online",
     },
   ];
 
