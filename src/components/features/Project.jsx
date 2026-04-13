@@ -3,6 +3,7 @@ import { Github, ExternalLink } from "lucide-react";
 import AdminDashboard from "../../assets/admin_dashboard.png";
 import Utility from "../../assets/utility.jpg";
 import unlockwealth from "../../assets/unlockwdigital.png";
+import thetaung from "../../assets/thet_aung.png";
 
 const Projects = () => {
   const projectList = [
@@ -25,6 +26,11 @@ const Projects = () => {
       tech: "React / Typescript",
       image: unlockwealth,
       demo: "https://unlockwealthdigital.online",
+    },
+    {
+      title: "Thet Aung Optical Shop",
+      tech: "React Native / Typescript / Sqlite",
+      image: thetaung,
     },
   ];
 
@@ -100,15 +106,17 @@ const ProjectCard = ({ project }) => (
 
       <div className="flex items-center justify-between mt-6">
         <div className="flex gap-4">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="text-slate-400 hover:text-white transition-colors"
-            title="View Code"
-          >
-            <Github size={20} />
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition-colors"
+              title="View Code"
+            >
+              <Github size={20} />
+            </a>
+          )}
 
           {project.demo && (
             <a
