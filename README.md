@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full Stack Developer Portfolio
+
+A modern, professional portfolio website built with Next.js (App Router), TypeScript, Tailwind CSS, GSAP, and next-themes. Designed with a premium dark-first aesthetic inspired by the [Figma Portfolio Community template](https://www.figma.com/design/cQhY06BbX1Dj49rTjiHv98/Personal-website-%7C-Portfolio--Community-).
+
+## Features
+
+- **Dark / Light mode** — Dark mode default via `next-themes`
+- **Responsive** — Mobile, tablet, and desktop layouts
+- **Animations** — GSAP scroll reveals and hero entrance animations
+- **Project filtering** — Filter featured projects by technology
+- **Animated counters** — Stats animate on scroll
+- **Sticky navbar** — Active section highlighting and mobile menu
+- **Accessibility** — Semantic HTML, skip link, ARIA labels, keyboard focus styles
+- **SEO** — Metadata, Open Graph, Twitter cards, `robots.txt`, `sitemap.xml`
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) 16 (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) v4
+- [GSAP](https://gsap.com/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Lucide React](https://lucide.dev/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm (or yarn / pnpm)
+
+### Installation
+
+```bash
+git clone <your-repo-url>
+cd portfolio
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `src/data/site.ts` for name, tagline, contact details, and social links.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Projects, Skills, Experience, Education
 
-## Deploy on Vercel
+| File | Content |
+|------|---------|
+| `src/data/projects.ts` | Featured projects |
+| `src/data/skills.ts` | Skills and proficiency |
+| `src/data/experience.ts` | Work history |
+| `src/data/education.ts` | Education entries |
+| `src/data/navigation.ts` | Navbar links |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Replace placeholder assets in `public/images/`:
+
+- `hero-avatar.svg` — Hero portrait
+- `about-image.svg` — About section image
+- `projects/*.svg` — Project thumbnails
+- `og-image.svg` — Social share image (1200×630 recommended as PNG for best compatibility)
+
+### Resume
+
+Replace `public/resume.pdf` with your actual resume PDF.
+
+### Site URL
+
+Set your production URL for SEO:
+
+```bash
+# .env.local
+NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+```
+
+Update `siteUrl` in `src/data/site.ts` as well.
+
+## Project Structure
+
+```
+src/
+├── app/                 # App Router pages, layout, global styles
+├── components/
+│   ├── layout/          # Navbar, Footer, ThemeToggle, etc.
+│   ├── providers/       # ThemeProvider
+│   ├── sections/      # Page sections (Hero, About, …)
+│   └── ui/            # Reusable UI components
+├── data/                # Content data files
+├── hooks/               # Custom React hooks
+├── lib/                 # Utilities and metadata
+└── types/               # TypeScript interfaces
+public/
+├── images/              # Static images
+└── resume.pdf
+```
+
+## Deployment (Vercel)
+
+1. Push the repository to GitHub.
+2. Import the project on [Vercel](https://vercel.com).
+3. Add environment variable `NEXT_PUBLIC_SITE_URL` with your production URL.
+4. Deploy — Vercel auto-detects Next.js settings.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Create production build |
+| `npm start` | Run production server |
+| `npm run lint` | Run ESLint |
+
+## License
+
+MIT — customize freely for your personal portfolio.
