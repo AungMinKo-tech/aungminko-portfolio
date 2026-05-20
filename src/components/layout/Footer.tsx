@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="border-t border-border bg-card/50">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6 lg:px-8">
         <p className="text-sm text-muted" suppressHydrationWarning>
-          © <span>{new Date().getFullYear()}</span>{" "}
+          © <span>2025 - {new Date().getFullYear()}</span>{" "}
           <span className="font-medium text-foreground">{siteConfig.name}</span>. All rights
           reserved.
         </p>

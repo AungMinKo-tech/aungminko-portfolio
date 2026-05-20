@@ -2,7 +2,7 @@
 
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
-import { Button } from "@/components/ui/Button";
+// import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
@@ -71,7 +71,7 @@ export function Navbar() {
             <div className="hidden lg:block">
               <ThemeToggle />
             </div>
-            <Button
+            {/* <Button
               href={siteConfig.resumeUrl}
               variant="primary"
               size="sm"
@@ -90,7 +90,7 @@ export function Navbar() {
               aria-controls="mobile-menu"
             >
               <Menu className="h-5 w-5" />
-            </button>
+            </button> */}
           </div>
         </nav>
       </header>

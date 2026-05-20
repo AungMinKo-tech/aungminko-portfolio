@@ -4,7 +4,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { heroStats, siteConfig } from "@/data/site";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -61,10 +61,10 @@ export function Hero() {
                 <Mail className="h-5 w-5" />
                 Get In Touch
               </Button>
-              <Button href={siteConfig.resumeUrl} variant="secondary" size="lg" download>
+              {/* <Button href={siteConfig.resumeUrl} variant="secondary" size="lg" download>
                 <Download className="h-5 w-5" />
                 Download Resume
-              </Button>
+              </Button> */}
             </div>
 
             <dl className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">

@@ -9,7 +9,7 @@ export const projects: Project[] = [
     image: "/images/projects/utility.jpg",
     technologies: ["PHP", "Laravel", "PostgreSQL"],
     githubUrl: "https://github.com/AungMinKo-tech/Laravel-Utility-Management-System-",
-    featured: false,
+    featured: true,
   },
   {
     id: "ecommerce-system",
@@ -28,13 +28,14 @@ export const projects: Project[] = [
       "Business management solution for optical shops featuring patient records, prescription tracking.",
     image: "/images/projects/thet_aung.png",
     technologies: ["React Native", "Expo", "SQLite"],
-    featured: false,
+    featured: true,
+    isPrivate: true
   },
   {
     id: "unlock-wealth",
     title: "Unlock Wealth Digital",
-    description:
-      "",
+    description: 
+      "Developed a modern and highly responsive corporate portfolio website for a startup company, built using React, Vite, and Tailwind CSS to ensure blazing-fast performance and a sleek user experience.",
     image: "/images/projects/unlockwdigital.png",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://unlockwealthdigital.online/",

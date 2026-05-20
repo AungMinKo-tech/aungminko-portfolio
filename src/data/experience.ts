@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
     role: "Web Developer Intern",
     company: "MoniSoft Development System",
     location: "Yangon, Myanmar",
-    startDate: "Mar 2026",
+    startDate: "Feb 2026",
     endDate: "May 2026",
     description: [
       "Supported development of web applications by implementing UI components, fixing bugs and testing features under senior guidance.",

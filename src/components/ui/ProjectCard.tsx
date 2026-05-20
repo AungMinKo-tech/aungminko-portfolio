@@ -30,12 +30,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
             {project.title}
           </h3>
-          {project.isPrivate && (
-            <Badge variant="private" className="shrink-0 gap-1">
-              <Lock className="h-3 w-3" aria-hidden />
-              Private
-            </Badge>
-          )}
         </div>
 
         <p className="text-sm leading-relaxed text-muted line-clamp-2">{project.description}</p>
@@ -73,6 +67,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Live Demo
             </Link>
           )}
+          {project.isPrivate && (
+              <Badge variant="private" className="shrink-0 gap-1">
+                <Lock className="h-3 w-3" aria-hidden />
+                Private
+              </Badge>
+            )}
         </div>
       </div>
     </article>
