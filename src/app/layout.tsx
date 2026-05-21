@@ -7,6 +7,7 @@ import { siteMetadata } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,6 +53,7 @@ export default function RootLayout({
           </a>
           <Navbar />
           <main id="main-content">{children}</main>
+          <SpeedInsights />
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
