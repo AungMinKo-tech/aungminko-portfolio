@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
 
 export const heroStats: Stat[] = [
   { label: "Years Experience", value: 1, suffix: "+" },
-  { label: "Projects Completed", value: 5, suffix: "+" },
+  { label: "Projects Completed", value: 7, suffix: "+" },
   // { label: "Technologies", value: 15, suffix: "+" },
   // { label: "Happy Clients", value: 12, suffix: "+" },
 ];

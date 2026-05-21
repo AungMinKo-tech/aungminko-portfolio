@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
-import { Button } from "@/components/ui/Button";
+// import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -79,10 +79,10 @@ export function MobileMenu({ isOpen, onClose, activeSection }: MobileMenuProps) 
 
       <div className="mt-auto flex flex-col gap-4 pt-8">
         <ThemeToggle />
-        <Button href={siteConfig.resumeUrl} variant="primary" className="w-full">
+        {/* <Button href={siteConfig.resumeUrl} variant="primary" className="w-full">
           <Download className="h-4 w-4" />
           Download Resume
-        </Button>
+        </Button> */}
       </div>
     </nav>
   </>

@@ -80,7 +80,7 @@ export function Navbar() {
             >
               <Download className="h-4 w-4" />
               Resume
-            </Button>
+            </Button> */}
             <button
               type="button"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card lg:hidden focus-ring"
@@ -90,7 +90,7 @@ export function Navbar() {
               aria-controls="mobile-menu"
             >
               <Menu className="h-5 w-5" />
-            </button> */}
+            </button>
           </div>
         </nav>
       </header>
