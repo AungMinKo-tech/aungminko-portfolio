@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-linear-to-t from-card/90 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
       <div className="space-y-4 p-6">
@@ -32,7 +32,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </h3>
         </div>
 
-        <p className="text-sm leading-relaxed text-muted line-clamp-2">{project.description}</p>
+        <p className="text-sm leading-relaxed text-muted line-clamp-2">
+          {project.description}
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
@@ -68,11 +70,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </Link>
           )}
           {project.isPrivate && (
-              <Badge variant="private" className="shrink-0 gap-1">
-                <Lock className="h-3 w-3" aria-hidden />
-                Private
-              </Badge>
-            )}
+            <Badge variant="private" className="shrink-0 gap-1">
+              <Lock className="h-3 w-3" aria-hidden />
+              Private
+            </Badge>
+          )}
         </div>
       </div>
     </article>

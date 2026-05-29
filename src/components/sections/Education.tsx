@@ -11,12 +11,13 @@ export function Education() {
   const revealRef = useGsapReveal<HTMLDivElement>({ stagger: 0.15 });
 
   return (
-    <section id="education" className="section-padding" aria-labelledby="education-heading">
+    <section
+      id="education"
+      className="section-padding"
+      aria-labelledby="education-heading"
+    >
       <Container>
-        <SectionHeading
-          label="Education"
-          title="Academic Background"
-        />
+        <SectionHeading label="Education" title="Academic Background" />
 
         <div ref={revealRef} className="mx-auto grid max-w-3xl gap-6">
           {education.map((item) => (
@@ -29,7 +30,9 @@ export function Education() {
                   <GraduationCap className="h-6 w-6" aria-hidden />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground md:text-xl">{item.degree}</h3>
+                  <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                    {item.degree}
+                  </h3>
                   <p className="text-accent">{item.institution}</p>
                 </div>
               </div>
@@ -42,7 +45,9 @@ export function Education() {
                 <time>{formatDateRange(item.startDate, item.endDate)}</time>
               </div>
 
-              <p className="text-sm leading-relaxed text-muted md:text-base">{item.description}</p>
+              <p className="text-sm leading-relaxed text-muted md:text-base">
+                {item.description}
+              </p>
             </article>
           ))}
         </div>

@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 
 type Variant = "primary" | "secondary" | "ghost" | "outline";
 type Size = "sm" | "md" | "lg";
@@ -46,7 +50,7 @@ export function Button({
     "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus-ring",
     variantStyles[variant],
     sizeStyles[size],
-    className
+    className,
   );
 
   if (href) {
@@ -55,22 +59,39 @@ export function Button({
       href.startsWith("mailto") ||
       href.startsWith("#") ||
       href.startsWith("/");
-    if (isAnchor && (href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto") || href.endsWith(".pdf"))) {
+    if (
+      isAnchor &&
+      (href.startsWith("#") ||
+        href.startsWith("http") ||
+        href.startsWith("mailto") ||
+        href.endsWith(".pdf"))
+    ) {
       return (
-        <a href={href} className={styles} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+        <a
+          href={href}
+          className={styles}
+          {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+        >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={styles} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <Link
+        href={href}
+        className={styles}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={styles} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}>
+    <button
+      className={styles}
+      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
       {children}
     </button>
   );

@@ -7,7 +7,10 @@ interface TimelineItemProps {
   isLast?: boolean;
 }
 
-export function TimelineItem({ experience, isLast = false }: TimelineItemProps) {
+export function TimelineItem({
+  experience,
+  isLast = false,
+}: TimelineItemProps) {
   return (
     <div className="relative flex gap-6 pb-12 last:pb-0">
       <div className="relative flex flex-col items-center">
@@ -22,7 +25,9 @@ export function TimelineItem({ experience, isLast = false }: TimelineItemProps) 
       <div className="flex-1 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5">
         <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
           <div>
-            <h3 className="text-lg font-semibold text-foreground">{experience.role}</h3>
+            <h3 className="text-lg font-semibold text-foreground">
+              {experience.role}
+            </h3>
             <p className="text-accent">{experience.company}</p>
           </div>
           <time className="text-sm text-muted">
@@ -33,7 +38,10 @@ export function TimelineItem({ experience, isLast = false }: TimelineItemProps) 
         <ul className="mb-4 space-y-2">
           {experience.description.map((item) => (
             <li key={item} className="flex gap-2 text-sm text-muted">
-              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden />
+              <span
+                className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"
+                aria-hidden
+              />
               {item}
             </li>
           ))}

@@ -15,17 +15,20 @@ export function Projects() {
   const filteredProjects = useMemo(() => {
     if (activeFilter === "All") return projects;
     return projects.filter((p) =>
-      p.technologies.some((t) => t.toLowerCase() === activeFilter.toLowerCase())
+      p.technologies.some(
+        (t) => t.toLowerCase() === activeFilter.toLowerCase(),
+      ),
     );
   }, [activeFilter]);
 
   return (
-    <section id="projects" className="section-padding" aria-labelledby="projects-heading">
+    <section
+      id="projects"
+      className="section-padding"
+      aria-labelledby="projects-heading"
+    >
       <Container>
-        <SectionHeading
-          label="Portfolio"
-          title="Featured Projects"
-        />
+        <SectionHeading label="Portfolio" title="Featured Projects" />
 
         <FilterTabs
           tags={projectFilterTags}

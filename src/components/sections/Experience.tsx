@@ -16,10 +16,7 @@ export function Experience() {
       aria-labelledby="experience-heading"
     >
       <Container>
-        <SectionHeading
-          label="Experience"
-          title="Professional Journey"
-        />
+        <SectionHeading label="Experience" title="Professional Journey" />
 
         <div ref={revealRef} className="mx-auto max-w-3xl">
           {experiences.map((exp, index) => (

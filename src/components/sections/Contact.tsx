@@ -29,7 +29,10 @@ import {
 
 import type { SocialLink } from "@/types";
 
-const socialIcons: Record<SocialLink["icon"], ComponentType<{ className?: string }>> = {
+const socialIcons: Record<
+  SocialLink["icon"],
+  ComponentType<{ className?: string }>
+> = {
   github: GitHubIcon,
   linkedin: LinkedInIcon,
   twitter: Mail,
@@ -85,7 +88,7 @@ const inputStyles = (hasError: boolean) =>
     "w-full rounded-xl border bg-background px-4 py-3 text-foreground transition-colors placeholder:text-muted-foreground focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-60",
     hasError
       ? "border-red-500/60 focus:border-red-500 focus:ring-red-500/20"
-      : "border-border focus:border-accent focus:ring-accent/20"
+      : "border-border focus:border-accent focus:ring-accent/20",
   );
 
 export function Contact() {
@@ -93,7 +96,9 @@ export function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState<ContactFormData>(emptyContactForm);
   const [errors, setErrors] = useState<ContactErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<ContactField, boolean>>>({});
+  const [touched, setTouched] = useState<
+    Partial<Record<ContactField, boolean>>
+  >({});
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -111,7 +116,8 @@ export function Contact() {
   };
 
   const handleBlur =
-    (field: ContactField) => (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (field: ContactField) =>
+    (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setTouched((prev) => ({ ...prev, [field]: true }));
       const message = validateContactField(field, e.target.value);
       setErrors((prev) => {
@@ -140,12 +146,13 @@ export function Contact() {
     const form = formRef.current;
     if (!form) return;
 
-    const { serviceId, templateId, publicKey, isConfigured } = getEmailJsConfig();
+    const { serviceId, templateId, publicKey, isConfigured } =
+      getEmailJsConfig();
 
     if (!isConfigured) {
       setStatus("error");
       setErrorMessage(
-        "Email service is not configured. Add your EmailJS keys to .env.local and restart the dev server."
+        "Email service is not configured. Add your EmailJS keys to .env.local and restart the dev server.",
       );
       return;
     }
@@ -165,7 +172,7 @@ export function Contact() {
       console.error("EmailJS error:", error);
       setStatus("error");
       setErrorMessage(
-        "Something went wrong while sending your message. Please try again or email me directly."
+        "Something went wrong while sending your message. Please try again or email me directly.",
       );
     }
   };
@@ -190,13 +197,18 @@ export function Contact() {
           align="center"
         />
 
-        <div ref={revealRef} className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-5">
+        <div
+          ref={revealRef}
+          className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-5"
+        >
           <div className="space-y-8 lg:col-span-2">
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-foreground">Get in touch</h3>
+              <h3 className="mb-4 text-lg font-semibold text-foreground">
+                Get in touch
+              </h3>
               <p className="leading-relaxed text-muted">
-                I&apos;m currently open to new opportunities and collaborations. Feel free to reach
-                out through any of the channels below.
+                I&apos;m currently open to new opportunities and collaborations.
+                Feel free to reach out through any of the channels below.
               </p>
             </div>
 
@@ -258,66 +270,86 @@ export function Contact() {
             aria-label="Contact form"
           >
             <div className="grid gap-6 sm:grid-cols-2">
-              {fieldMeta.map(({ id, label, type, placeholder, autoComplete, rows, gridClass }) => {
-                const error = touched[id] ? errors[id] : undefined;
-                const showError = Boolean(error);
+              {fieldMeta.map(
+                ({
+                  id,
+                  label,
+                  type,
+                  placeholder,
+                  autoComplete,
+                  rows,
+                  gridClass,
+                }) => {
+                  const error = touched[id] ? errors[id] : undefined;
+                  const showError = Boolean(error);
 
-                return (
-                  <div key={id} className={gridClass}>
-                    <label htmlFor={id} className="mb-2 block text-sm font-medium text-foreground">
-                      {label}
-                      <span className="text-accent" aria-hidden>
-                        {" "}
-                        *
-                      </span>
-                    </label>
-
-                    {type === "textarea" ? (
-                      <textarea
-                        id={id}
-                        name={emailJsName(id)}
-                        value={values[id]}
-                        onChange={(e) => updateField(id, e.target.value)}
-                        onBlur={handleBlur(id)}
-                        required
-                        disabled={isSending}
-                        rows={rows}
-                        aria-invalid={showError}
-                        aria-describedby={showError ? `${id}-error` : undefined}
-                        className={cn(inputStyles(showError), "resize-none")}
-                        placeholder={placeholder}
-                      />
-                    ) : (
-                      <input
-                        id={id}
-                        name={emailJsName(id)}
-                        type={type}
-                        value={values[id]}
-                        onChange={(e) => updateField(id, e.target.value)}
-                        onBlur={handleBlur(id)}
-                        required
-                        disabled={isSending}
-                        autoComplete={autoComplete}
-                        aria-invalid={showError}
-                        aria-describedby={showError ? `${id}-error` : undefined}
-                        className={inputStyles(showError)}
-                        placeholder={placeholder}
-                      />
-                    )}
-
-                    {showError && (
-                      <p
-                        id={`${id}-error`}
-                        role="alert"
-                        className="mt-1.5 flex items-start gap-1.5 text-sm text-red-500"
+                  return (
+                    <div key={id} className={gridClass}>
+                      <label
+                        htmlFor={id}
+                        className="mb-2 block text-sm font-medium text-foreground"
                       >
-                        <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
-                        {error}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
+                        {label}
+                        <span className="text-accent" aria-hidden>
+                          {" "}
+                          *
+                        </span>
+                      </label>
+
+                      {type === "textarea" ? (
+                        <textarea
+                          id={id}
+                          name={emailJsName(id)}
+                          value={values[id]}
+                          onChange={(e) => updateField(id, e.target.value)}
+                          onBlur={handleBlur(id)}
+                          required
+                          disabled={isSending}
+                          rows={rows}
+                          aria-invalid={showError}
+                          aria-describedby={
+                            showError ? `${id}-error` : undefined
+                          }
+                          className={cn(inputStyles(showError), "resize-none")}
+                          placeholder={placeholder}
+                        />
+                      ) : (
+                        <input
+                          id={id}
+                          name={emailJsName(id)}
+                          type={type}
+                          value={values[id]}
+                          onChange={(e) => updateField(id, e.target.value)}
+                          onBlur={handleBlur(id)}
+                          required
+                          disabled={isSending}
+                          autoComplete={autoComplete}
+                          aria-invalid={showError}
+                          aria-describedby={
+                            showError ? `${id}-error` : undefined
+                          }
+                          className={inputStyles(showError)}
+                          placeholder={placeholder}
+                        />
+                      )}
+
+                      {showError && (
+                        <p
+                          id={`${id}-error`}
+                          role="alert"
+                          className="mt-1.5 flex items-start gap-1.5 text-sm text-red-500"
+                        >
+                          <AlertCircle
+                            className="mt-0.5 h-3.5 w-3.5 shrink-0"
+                            aria-hidden
+                          />
+                          {error}
+                        </p>
+                      )}
+                    </div>
+                  );
+                },
+              )}
             </div>
 
             <Button
@@ -332,7 +364,11 @@ export function Contact() {
               ) : (
                 <Send className="h-5 w-5" aria-hidden />
               )}
-              {isSending ? "Sending..." : isSuccess ? "Message Sent!" : "Send Message"}
+              {isSending
+                ? "Sending..."
+                : isSuccess
+                  ? "Message Sent!"
+                  : "Send Message"}
             </Button>
 
             {isSuccess && (
@@ -342,7 +378,10 @@ export function Contact() {
             )}
 
             {isError && errorMessage && (
-              <p className="mt-3 flex items-start gap-2 text-sm text-red-500" role="alert">
+              <p
+                className="mt-3 flex items-start gap-2 text-sm text-red-500"
+                role="alert"
+              >
                 <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
                 {errorMessage}
               </p>

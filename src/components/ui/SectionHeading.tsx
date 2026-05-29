@@ -20,7 +20,7 @@ export function SectionHeading({
       className={cn(
         "mb-12 md:mb-16",
         align === "center" && "mx-auto max-w-2xl text-center",
-        className
+        className,
       )}
     >
       <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-accent">
@@ -30,7 +30,9 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">{description}</p>
+        <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+          {description}
+        </p>
       )}
     </div>
   );

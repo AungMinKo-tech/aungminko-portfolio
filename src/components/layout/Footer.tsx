@@ -1,4 +1,8 @@
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from "@/components/icons/SocialIcons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "@/components/icons/SocialIcons";
 import { siteConfig } from "@/data/site";
 import { Mail } from "lucide-react";
 import Link from "next/link";
@@ -16,8 +20,8 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6 lg:px-8">
         <p className="text-sm text-muted" suppressHydrationWarning>
           © <span>2025 - {new Date().getFullYear()}</span>{" "}
-          <span className="font-medium text-foreground">{siteConfig.name}</span>. All rights
-          reserved.
+          <span className="font-medium text-foreground">{siteConfig.name}</span>
+          . All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">

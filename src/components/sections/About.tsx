@@ -11,16 +11,20 @@ export function About() {
   const revealRef = useGsapReveal<HTMLDivElement>({ stagger: 0.15 });
 
   return (
-    <section id="about" className="section-padding" aria-labelledby="about-heading">
+    <section
+      id="about"
+      className="section-padding"
+      aria-labelledby="about-heading"
+    >
       <Container>
-        <SectionHeading
-          label="About Me"
-          title="Crafting Digital Experiences"
-        />
+        <SectionHeading label="About Me" title="Crafting Digital Experiences" />
 
-        <div ref={revealRef} className="grid items-center gap-12 lg:grid-cols-2">
+        <div
+          ref={revealRef}
+          className="grid items-center gap-12 lg:grid-cols-2"
+        >
           <div className="relative mx-auto w-full max-w-md">
-            <div className="gradient-border relative aspect-[4/5] overflow-hidden rounded-2xl">
+            <div className="gradient-border relative aspect-4/5 overflow-hidden rounded-2xl">
               <Image
                 src="/images/my-profile-image.jpg"
                 alt="About me"
@@ -33,7 +37,10 @@ export function About() {
 
           <div className="space-y-6">
             {aboutParagraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 40)} className="text-base leading-relaxed text-muted md:text-lg">
+              <p
+                key={paragraph.slice(0, 40)}
+                className="text-base leading-relaxed text-muted md:text-lg"
+              >
                 {paragraph}
               </p>
             ))}
@@ -44,14 +51,16 @@ export function About() {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {["Problem Solver", "Team Player", "Fast Learner"].map((trait) => (
-                <span
-                  key={trait}
-                  className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
-                >
-                  {trait}
-                </span>
-              ))}
+              {["Problem Solver", "Team Player", "Fast Learner"].map(
+                (trait) => (
+                  <span
+                    key={trait}
+                    className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
+                  >
+                    {trait}
+                  </span>
+                ),
+              )}
             </div>
           </div>
         </div>

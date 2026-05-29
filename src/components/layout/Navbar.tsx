@@ -7,7 +7,7 @@ import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
-import { Download, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
@@ -29,8 +29,8 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "border-b border-border bg-[var(--nav-blur)] backdrop-blur-xl shadow-sm"
-            : "bg-transparent"
+            ? "border-b border-border bg-(--nav-blur) backdrop-blur-xl shadow-sm"
+            : "bg-transparent",
         )}
       >
         <nav
@@ -56,7 +56,7 @@ export function Navbar() {
                       "rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-ring",
                       isActive
                         ? "text-accent"
-                        : "text-muted hover:text-foreground"
+                        : "text-muted hover:text-foreground",
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >

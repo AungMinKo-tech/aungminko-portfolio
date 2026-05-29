@@ -19,9 +19,17 @@ export function Hero() {
         .from(".hero-title", { opacity: 0, y: 30, duration: 0.8 }, "-=0.3")
         .from(".hero-subtitle", { opacity: 0, y: 20, duration: 0.6 }, "-=0.4")
         .from(".hero-desc", { opacity: 0, y: 20, duration: 0.6 }, "-=0.3")
-        .from(".hero-cta", { opacity: 0, y: 20, duration: 0.6, stagger: 0.1 }, "-=0.2")
+        .from(
+          ".hero-cta",
+          { opacity: 0, y: 20, duration: 0.6, stagger: 0.1 },
+          "-=0.2",
+        )
         .from(".hero-image", { opacity: 0, scale: 0.9, duration: 0.8 }, "-=0.6")
-        .from(".hero-stat", { opacity: 0, y: 20, duration: 0.5, stagger: 0.1 }, "-=0.4");
+        .from(
+          ".hero-stat",
+          { opacity: 0, y: 20, duration: 0.5, stagger: 0.1 },
+          "-=0.4",
+        );
     }, contentRef);
 
     return () => ctx.revert();
@@ -34,10 +42,16 @@ export function Hero() {
       aria-label="Hero"
     >
       <div className="glow-orb -left-32 top-20 h-96 w-96" aria-hidden />
-      <div className="glow-orb right-0 top-1/3 h-80 w-80 bg-accent-secondary/10" aria-hidden />
+      <div
+        className="glow-orb right-0 top-1/3 h-80 w-80 bg-accent-secondary/10"
+        aria-hidden
+      />
 
       <Container className="relative z-10 py-20">
-        <div ref={contentRef} className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div
+          ref={contentRef}
+          className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16"
+        >
           <div className="order-2 lg:order-1">
             <span className="hero-badge mb-4 inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               {siteConfig.role}
@@ -69,11 +83,16 @@ export function Hero() {
 
             <dl className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {heroStats.map((stat) => (
-                <div key={stat.label} className="hero-stat text-center sm:text-left">
+                <div
+                  key={stat.label}
+                  className="hero-stat text-center sm:text-left"
+                >
                   <dt className="text-2xl font-bold text-foreground md:text-3xl">
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </dt>
-                  <dd className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</dd>
+                  <dd className="mt-1 text-xs text-muted sm:text-sm">
+                    {stat.label}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -90,7 +109,7 @@ export function Hero() {
               />
             </div>
             <div
-              className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-3xl bg-gradient-to-br from-accent/30 to-accent-secondary/30 blur-2xl"
+              className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-3xl bg-linear-to-br from-accent/30 to-accent-secondary/30 blur-2xl"
               aria-hidden
             />
           </div>
